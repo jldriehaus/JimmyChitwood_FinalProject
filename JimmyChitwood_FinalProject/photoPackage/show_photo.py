@@ -17,7 +17,7 @@ from PIL import Image, ImageOps
 class PhotoDisplayer:
     def __init__(self, image_path):
         self.image_path = image_path
-
+        
     def display_photo(self):
         try:
             image = Image.open(self.image_path)
