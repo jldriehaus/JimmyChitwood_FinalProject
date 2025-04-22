@@ -12,12 +12,19 @@
 
 # Anything else that's relevant: n/a
 
-from PIL import Image
+from PIL import Image, ImageOps
 
 class PhotoDisplayer:
-    def __init__(self, photo_path):
-        self.photo_path = photo_path
+    def __init__(self, image_path):
+        self.image_path = image_path
 
     def display_photo(self):
-        image = Image.open(self.photo_path)
-        image.show()
+        try:
+            image = Image.open(self.image_path)
+
+            # This automatically rotates based on EXIF data
+            image = ImageOps.exif_transpose(image)
+
+            image.show()
+        except Exception as e:
+            print(f"Error displaying photo: {e}")
