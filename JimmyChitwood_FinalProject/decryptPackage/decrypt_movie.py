@@ -1,3 +1,18 @@
+# File Name : JimmyChitwood_FinalProject
+# Student Name: Jack Driehaus
+# email:  driehajl@mail.uc.edu
+# Assignment Number: Assignment Final Project
+# Due Date:   04/24/25
+# Course #/Section:   IS4010-002
+# Semester/Year:   spring 2025
+# Brief Description of the assignment:  Decrypt text that shows a location and a movie title then take a picture there and have it display
+
+# Brief Description of what this module does. Decrypts the code that shows the movie 
+# Citations: chatgpt.com
+
+# Anything else that's relevant: 
+
+
 import json
 from cryptography.fernet import Fernet
 
